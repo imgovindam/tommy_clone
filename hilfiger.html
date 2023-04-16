@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            background-color: aqua;
+        }
+
+        .item1 {
+            width: 100%;
+            background-color: rgb(23, 23, 23);
+            height: 10px;
+            position: relative;
+            animation-name: item1;
+            animation-duration: 2s;
+
+
+
+        }
+
+        .item2 {
+            width: 100%;
+            background-color: white;
+            height: 10px;
+            position: relative;
+            animation-name: item1;
+            animation-duration: 2s;
+
+
+        }
+
+        .item3 {
+            width: 100%;
+            background-color: red;
+            height: 10px;
+            position: relative;
+            animation-name: item1;
+            animation-duration: 2s;
+        }
+
+        .item4 {
+            width: 100%;
+            background-color: rgb(23, 23, 23);
+            height: 10px;
+            position: relative;
+            animation-name: item1;
+            animation-duration: 2s;
+        }
+
+        @keyframes item1 {
+            from {
+                height: 200px;
+                background-color: white;
+            }
+
+            to {
+                height: 10px;
+            }
+
+        }
+
+        @keyframes item2 {
+            from {
+                height: 200px;
+            }
+
+            to {
+                height: 10px;
+            }
+        }
+
+        @keyframes item3 {
+            from {
+                height: 200px;
+            }
+
+            to {
+                height: 10px;
+            }
+        }
+
+        @keyframes item4 {
+            from {
+                height: 200px;
+            }
+
+            to {
+                height: 10px;
+            }
+        }
+
+        header {
+            background-color: white;
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .header-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav {
+            /* margin-left: -220%; */
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+
+        .equal {
+            font-size: 40px;
+        }
+
+        .equal:hover {
+            font-size: 60px;
+            color: rgb(65, 63, 63);
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        .find a {
+            color: rgba(20, 22, 3, 0.973);
+        }
+
+        .find a:hover {
+            color: rgb(15, 15, 15);
+        }
+
+        .search-block {
+            cursor: pointer;
+        }
+
+        .search:first-child {
+            width: 10px;
+            height: 20px;
+            background-image: url("https://icon-library.com/images/search-icon-jpg/search-icon-jpg-18.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .search:last-child {
+            display: none;
+            color: #bcbcbc;
+            font-size: 20px;
+        }
+
+        form {
+            height: 100vh;
+            background-color: whitesmoke;
+            width: 80px;
+            z-index: 12;
+            position: relative;
+            top: 0px;
+            right: 0px;
+            display: none;
+        }
+
+        .logo {
+            width: 265px;
+            height: 60px;
+            background-image: url("https://global.tommy.com/tommy-global-images/header/th-logo.svg");
+            background-repeat: no-repeat;
+            background-position: 10px;
+
+        }
+
+        @media screen and (min-width:30px) and (max-width:581px) {
+            .find {
+                display: none;
+
+            }
+
+            .aaa {
+                display: none;
+            }
+
+            .logo {
+                width: 650px;
+                height: 50px;
+
+            }
+
+            .search:first-child {
+                width: 20px;
+                height: 20px;
+            }
+
+            .equal {
+                display: block;
+            }
+
+            nav {
+                display: flex;
+                position: absolute;
+                height: 500px;
+                left: -100vw;
+                background-color: rgb(247, 239, 239);
+                width: 100%;
+                top: 150px;
+                transition-property: all;
+                transition-duration: 0.5s;
+            }
+
+            nav ul {
+                width: 100px;
+                height: 400px;
+                flex-direction: column;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .equal:hover+nav {
+                left: 0px;
+                z-index: 12;
+
+            }
+        }
+
+        .home-img {
+            width: 1300px;
+            height: 700px;
+            background-color: black;
+            background-image: url(image/A_Homepage_hero_banner_2800x1572.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .article :first-child {
+            color: white;
+            font-size: 100px;
+            font-weight: bolder;
+        }
+
+        .article :last-child {
+            color: white;
+        }
+
+        @media screen and (min-width:300px) and (max-width:581px) {
+            .home-img {
+                width: 100%;
+                height: 450px;
+
+            }
+
+            .article :first-child {
+                font-size: 40px;
+            }
+
+            .article :last-child {
+                font-size: 14px;
+            }
+        }
+
+        .content-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            background-color: white;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            height: 200px;
+            justify-content: center;
+            gap: 70px;
+
+        }
+
+        .content :first-child {
+            font-size: 26px;
+            font-weight: lighter;
+            color: midnightblue;
+            letter-spacing: 1px;
+            word-spacing: 10px;
+        }
+
+        .content :last-child {
+            width: 15vw;
+            height: 7vh;
+            background-color: midnightblue;
+            text-align: center;
+            padding-top: 15px;
+            color: white;
+
+        }
+
+        .content :last-child:hover {
+            background-color: white;
+            color: midnightblue;
+            font-weight: bolder;
+            border: 1px solid midnightblue;
+
+        }
+
+        @media screen and (min-width:380px) and (max-width:581px) {
+            .content-section {
+                height: 50vh;
+
+            }
+
+            .content :first-child {
+                font-size: 20px;
+            }
+
+            .content :last-child {
+                width: 140px;
+                height: 90px;
+                padding-top: 18px;
+            }
+        }
+
+        .sec-home-img {
+            display: flex;
+            width: 100%;
+            height: 1000px;
+        }
+
+        .img-section {
+            width: 65%;
+            height: 850px;
+            background-image: url(https://global.tommy.com/tommy-global-images/home-page/_size_1818x1572/D_Homepage_banner_1808x1536.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .style-first {
+            background-color: white;
+            width: 35%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .style-sec {
+            width: 15vh;
+            height: 35vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        .style-sec :nth-child(1) {
+            font-size: 25px;
+            color: midnightblue;
+            letter-spacing: 1px;
+            font-weight: lighter;
+        }
+
+        .style-sec :nth-child(2) {
+            color: midnightblue;
+            font-size: 14px;
+            font-weight: lighter;
+            letter-spacing: normal;
+        }
+
+        .style-sec :nth-child(3) {
+            width: 18vw;
+            height: 7vh;
+            background-color: #00174f;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .style-sec :nth-child(3):hover {
+            background-color: white;
+            color: #00174f;
+            border: 1px solid #00174f;
+            font-weight: bolder;
+        }
+
+        @media screen and (min-width:300px) and (max-width:581px) {
+            .sec-home-img {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .img-section {
+                width: 100%;
+            }
+
+            .style-first {
+                width: 100%;
+            }
+
+            .style-sec {
+                width: 80%;
+            }
+
+            .style-sec :nth-child(3) {
+                width: 35vw;
+                height: 7vh;
+                padding-top: 15px;
+
+
+            }
+
+        }
+
+        .season {
+            width: 80%;
+            height: 65vh;
+            background-color: white;
+            display: flex;
+            align-items: center;
+
+
+
+        }
+
+        .season p {
+            font-size: 4.13333rem;
+            line-height: 2.13333rem;
+            letter-spacing: 2px;
+            opacity: 0.2;
+            text-align: center;
+            text-align: justify;
+
+        }
+
+        @media screen and (min-width :300px) and (max-width :581px) {
+            .season p {
+                font-size: 2.13333rem;
+                line-height: 2.13333rem;
+                letter-spacing: 2px;
+                opacity: 0.2;
+                text-align: center;
+
+            }
+        }
+
+        .cool-sec {
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            position: relative;
+            justify-content: space-evenly;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        .women-sec {
+            position: relative;
+            width: 40vw;
+            height: 100vh;
+            background-color: #00174f;
+            bottom: 20vh;
+        }
+
+        .women-sec :first-child {
+            position: absolute;
+            width: 40vw;
+            height: 100vh;
+            left: 1vw;
+            bottom: 2vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/home-page/_size_1060x1400/E_Homepage_collection_module_women_1060x1400.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .women-sec :last-child {
+            position: absolute;
+            bottom: 20vh;
+            left: 13vw;
+            height: 7vh;
+            width: 20vw;
+            background-color: white;
+            color: #00174f;
+            text-align: center;
+            padding-top: 15px;
+
+        }
+
+        .women-sec :first-child:hover {
+            /* position: absolute; */
+            width: 40.5vw;
+            height: 100.5vh;
+            /* left: 1.5vw; */
+            /* bottom: 2.5vh; */
+            background-size: cover;
+        }
+
+        .women-sec :last-child:hover {
+            color: white;
+            background-color: #cc0c2f;
+        }
+
+        .men-sec {
+            position: relative;
+            width: 40vw;
+            height: 100vh;
+            background-color: #cc0c2f;
+            top: 20vh;
+        }
+
+        .men-sec :first-child {
+            position: absolute;
+            width: 40vw;
+            height: 100vh;
+            right: 1vh;
+            bottom: 2vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/home-page/_size_1060x1400/E_Homepage_collection_module_men_1060x1400.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .men-sec :first-child:hover {
+            width: 40.5vw;
+            height: 100.5vh;
+        }
+
+        .men-sec :last-child {
+            position: absolute;
+            bottom: 20vh;
+            left: 13vw;
+            height: 7vh;
+            width: 35vh;
+            background-color: white;
+            color: #00174f;
+            text-align: center;
+            padding-top: 15px;
+
+
+        }
+
+        .men-sec :last-child:hover {
+            color: white;
+            background-color: #cc0c2f;
+        }
+
+        .space {
+            width: 100%;
+            height: 30vh;
+            background-color: white;
+        }
+
+        @media screen and (min-width:300px) and (max-width:561px) {
+            .high {
+                height: 30vh;
+
+            }
+
+            .cool-sec {
+                display: flex;
+                flex-direction: column;
+                padding: 0px;
+            }
+
+            .women-sec {
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                bottom: 0px;
+            }
+
+            .women-sec :first-child {
+                position: absolute;
+                width: 90%;
+                height: 52.5vh;
+                right: 5vw;
+
+
+
+            }
+
+            .women-sec :last-child {
+                position: absolute;
+                bottom: 5vh;
+                padding-top: 25px;
+
+            }
+
+            .men-sec {
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                top: 0px;
+            }
+
+            .men-sec :first-child {
+                position: absolute;
+                width: 90%;
+                height: 52.5vh;
+                right: 5vw;
+                top: 4vh;
+            }
+
+            .men-sec :last-child {
+                position: absolute;
+                bottom: 5vh;
+                padding-top: 25px;
+            }
+
+            .space {
+                height: 10vh;
+            }
+        }
+
+        .back-sec {
+            display: flex;
+            height: 100vh;
+
+        }
+
+        .back-img {
+            width: 65vw;
+            height: 90vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/home-page/_size_1818x1572/D_Homepage_banner_Tommy_Jeans_1808x1536.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media screen and (min-width:300px) and (max-width:581px) {
+            .back-sec {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .back-img {
+                width: 100%;
+            }
+
+        }
+
+        .space-sec {
+            width: 100%;
+            height: 15vh;
+            color: white;
+        }
+
+        .kid {
+            width: 100%;
+            height: 95vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/_size_2800x1080/F_Homepage_hero_banner_kids_2800x1080.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* position: relative; */
+
+
+        }
+
+        .kid-cool {
+            width: 50vw;
+            height: 40vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: white;
+            font-weight: bolder;
+
+        }
+
+        @media screen and (min-width :300px) and (max-width :581px) {
+            .space-sec {
+                height: 5vh;
+            }
+
+            .kid {
+                width: 100%;
+                height: 26vh;
+
+            }
+
+            .kid-cool {
+                font-size: 30px;
+            }
+
+        }
+
+        .our-text {
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .our {
+            width: 70vw;
+            height: 60vh;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8vh;
+        }
+
+        .our div p {
+            color: #00174f;
+            font-size: 28px;
+            word-spacing: 3px;
+
+        }
+
+        .ex {
+            width: 14vw;
+            height: 3vw;
+            padding-top: 15px;
+            background-color: #00174f;
+            color: white;
+            text-align: center;
+
+        }
+
+        .ex:hover {
+            background-color: white;
+            font-weight: bolder;
+            color: #00174f;
+            border: 1px solid #00174f;
+        }
+
+        @media screen and (min-width:300px)and (max-width:581px) {
+            .our-text {
+                height: 50vh;
+            }
+
+            .our {
+                height: 50vh;
+            }
+
+            .our div p {
+                font-size: 24px;
+            }
+
+            .ex {
+                width: 20vw;
+                height: 4vh;
+                padding-top: 18px;
+            }
+
+        }
+
+        .about {
+            height: 20vh;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-us p {
+            font-size: 30px;
+            color: #00174f;
+            font-weight: bolder;
+        }
+
+        .back-img-sec {
+            width: 100vw;
+            height: 80vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: black; */
+        }
+
+        .img-back-sec {
+            display: flex;
+            width: 80vw;
+            height: 60vh;
+            border-right: 1px solid black;
+            /* background-color: #cc0c2f; */
+        }
+
+        .main {
+            width: 30vw;
+            height: 60vh;
+            background-color: #00174f;
+            color: #bcbcbc;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+
+        }
+
+        .main p {
+            font-size: 20px;
+        }
+
+        .main p a {
+            color: white;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .main p a:hover {
+            border-bottom: 2px solid white;
+            font-size: 15px;
+        }
+
+        .main-img {
+            width: 50vw;
+            height: 60vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/home-page/_size_1404x766/HP_Banner_Teaser_1_1404x766.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media screen and (min-width:300px) and (max-width:582px) {
+
+            .back-img-sec {
+                height: 70vh;
+            }
+
+            .img-back-sec {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .main {
+                width: 80vw;
+            }
+
+            .main-img {
+                width: 80vw;
+            }
+
+            .main p {
+                font-size: 17px;
+            }
+        }
+
+        .tom {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tom-text {
+            font-size: 40px;
+            color: #00174f;
+        }
+
+        .g {
+            width: 100%;
+            height: 75vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .g-img {
+            width: 80%;
+            height: 70vh;
+            background-color: #bcbcbc;
+        }
+
+        .g-img div {
+            width: 100%;
+            height: 60vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/home-page/_size_2250x1228/CAREERS3_200403_142526.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media screen and (min-width:300px) and (max-width:581px) {
+            .tom {
+                height: 15vh;
+            }
+
+            .tom-text {
+                font-size: 20px;
+            }
+
+            .g {
+                height: 55vh;
+            }
+
+            .g-img {
+                height: 50vh;
+                width: 60%;
+            }
+
+        }
+
+        .p1 {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+
+        }
+
+        .p2 {
+            /* display: flex;   */
+            color: #00174f;
+            width: 83.33333vw;
+            text-align: center;
+            /* margin-right: auto; */
+            /* margin-left: auto; */
+            font-size: 1.6rem;
+            line-height: 2.26667rem
+        }
+
+
+        .cr {
+            width: 15vw;
+            height: 3vw;
+            /* padding-top: 20px; */
+            background-color: #00174f;
+            color: white;
+            /* padding-top: 15px; */
+            font-size: 22px;
+            text-align: center;
+            justify-items: center;
+            justify-content: center;
+            text-justify: auto;
+            font-size: medium;
+
+
+        }
+
+        .cr:hover {
+            background-color: #bcbcbc;
+            background-color: white;
+            font-weight: bolder;
+            color: #00174f;
+            border: 1px solid #00174f;
+            /* align-items: baseline; */
+        }
+
+        @media screen and (min-width:300px) and (max-width:581px) {
+            .p1 {
+                display: flex;
+                height: 70vh;
+            }
+
+            .p2 {
+                width: 80vh;
+                height: 40vh;
+                align-items: center;
+                justify-content: center;
+                /* justify-content: space-around; */
+            }
+
+            .cr {
+
+                font-size: small;
+                width: 100px;
+                height: 25px;
+                text-align: center;
+                justify-content: center;
+
+            }
+
+        }
+
+        .last {
+            width: 100vw;
+            height: 80vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .last1 {
+            display: flex;
+            width: 80vw;
+            height: 60vh;
+            border-right: 1px solid black;
+        }
+
+        .t {
+            width: 30vw;
+            height: 60vh;
+            background-color: #00174f;
+            color: #bcbcbc;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .t p {
+            font-size: 18px;
+        }
+
+        .t p a {
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .t p a:hover {
+            border-bottom: 2px solid white;
+            font-size: 12px;
+        }
+
+        .s-img {
+            width: 50vw;
+            height: 60vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/home-page/_size_1404x766/HP_Banner_Teaser_2_1404x766.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        footer{
+            width: 100vw;
+            height: 80vh;
+            background-color: #00174f;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 6vh;
+
+        }
+
+    .f-sec {
+            display: flex;
+            flex-direction: column;
+            gap: 10vh;
+            height: 40vh;
+        }
+
+        .f-img {
+            width: 20vw;
+            height: 6vh;
+            background-image: url(https://global.tommy.com/tommy-global-images/footer/th-logo-white.svg);
+            background-repeat: no-repeat;
+
+        }
+
+        select {
+            background-color: #00174f;
+            height: 7vh;
+            font-size: 18px;
+            color: #bcbcbc;
+            border: none;
+            border-top: 2px solid #bcbcbc;
+        }
+
+        .f-sec p a {
+            font-size: 20px;
+            color: wheat;
+        }
+
+        .f-s-s {
+            display: flex;
+            gap: 7vh;
+        }
+
+        .f-article {
+            display: flex;
+            flex-direction: column;
+            gap: 4vh;
+        }
+
+        .f-head {
+            font-size: 20px;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .f-nav ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .f-nav ul li a {
+            color: white;
+        }
+      .f-low {
+        width: 100vw;
+        height: 100px;
+       n  display: flex;
+
+      }
+      .red {
+        background-color: #cc0c2f;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+      }
+      .pt {
+        width: 100vw;
+        color: #bcbcbc;
+      }
+      .nav privacy ul li {
+        color: #bcbcbc;
+      }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+    </section>
+
+    <header>
+        <section class="header-section">
+            <div class="equal">=</div>
+            <nav>
+                <ul>
+                    <li><a href="">Collection</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Press Release</a></li>
+                    <li><a href="">Career</a></li>
+
+                </ul>
+            </nav>
+        </section>
+        <section class="header-section">
+            <div class="logo"></div>
+        </section>
+        <section class="header-section">
+            <div class="find"><a href="">Find a store</a></div>
+            <div class="aaa">|</div>
+            <div class="search-block">
+                <div class="search">
+                    <div></div>
+                    <div></div>
+                </div>
+                <form action="">
+                    <input type="search">
+                </form>
+            </div>
+        </section>
+    </header>
+
+    <section class="home-img">
+        <article class="article">
+            <p>TOMMY HILFIGER</p>
+            <p>New looks,timeless style. The classic make a comeback</p>
+        </article>
+    </section>
+    <section class="content-section">
+        <div class="content">
+            <p>This Fall, we’re colliding timeless classics with a fresh wave of new energy to light-up the season.
+                Discover new prep styles, checkered patterns, and bold colors.</p>
+            <div>DISCOVER MORE</div>
+        </div>
+    </section>
+
+    <section class="sec-home-img">
+        <div class="img-section"></div>
+        <div class="style-first">
+            <div class="style-sec">
+                <p>PERFECT PREP STYLE? CHECK</p>
+                <p>So bold, so bright — the journey of modern prep continues.</p>
+                <div>EXPLORE</div>
+            </div>
+        </div>
+    </section>
+    <div class="season">
+        <p>SEASONAL HIGHLIGHTS</p>
+    </div>
+
+
+    <section class="cool-sec">
+        <article class="women-sec">
+            <div></div>
+            <div>DISCOVER WOMEN'S</div>
+        </article>
+        <article class="men-sec">
+            <div></div>
+            <div>DISCOVER MEN'S</div>
+        </article>
+    </section>
+    <div class="space"></div>
+
+    <section class="back-sec">
+        <div class="back-img"></div>
+        <article class="style-first">
+            <div class="style-sec">
+                <p>TOMMY JEANS FALL COLLECTION</p>
+                <p>Statement denim to wear your way</p>
+                <DIV>EXPLORE</DIV>
+
+
+
+            </div>
+        </article>
+    </section>
+
+    <div class="space-sec"></div>
+    <section class="kid">
+        <article class="kid-cool">
+            <p>KIDS FALL</p>
+            <p>COLLECTION</p>
+        </article>
+    </section>
+
+    <section class="our-text">
+        <article class="our">
+            <div>
+                <p>Inspired by our heritage, this Fall collection is all about timeless classics,</p>
+                <p>reimagined for the new generation. Full of preppy designs and bold colors, giving</p>
+                <p>the little ones the inspiration to shine bright.</p>
+            </div>
+            <div class="ex">EXPLORE</div>
+        </article>
+    </section>
+
+    <section class="about">
+        <article class="about-us">
+            <p>ABOUT US</p>
+        </article>
+
+    </section>
+
+    <section class="back-img-sec">
+        <article class="img-back-sec">
+            <div class="main">
+                <p>One of the world's leading designer lifestyle brands globally recognized for bringing to life the
+                    classic American cool spirit. Tommy Hilfiger markets its products under several brands in order to
+                    fully capitalize on its global appeal, as each brand varies in terms of price point, demographic
+                    target and distribution.</p>
+                <p><a href="">FIND OUT MORE</a></p>
+            </div>
+            <div class="main-img"></div>
+        </article>
+    </section>
+    <section class="tom">
+        <article class="tom-text">
+            <p>TOMMY HILFIGER CAREERS</p>
+        </article>
+    </section>
+
+    <section class="g">
+        <article class="g-img">
+            <div></div>
+        </article>
+    </section>
+    <section class="p1">
+        <article class="p2">
+            <div>
+                <p>Tommy Hilfiger employs over 17,000 associates spread across more than 90 countries worldwide. They
+                    come from all walks of life and actively promote a diverse culture that champions outspoken
+                    individuality and uncompromised creativity.</p>
+            </div>
+
+            <div class="cr"> DISCOVER CAREERS</div>
+        </article>
+    </section>
+    <section class="last">
+        <article class="last1">
+            <div class="t">
+                <p>Find out about our Corporate Responsibility initiatives.</p>
+                <p><a href="">READ MORE</a></p>
+            </div>
+            <div class="s-img"></div>
+        </article>
+    </section>
+
+
+    <footer>
+        <section class="f-sec">
+            <div class="f-img"></div>
+            <select>
+                <option value="location">Change location</option>
+                <option value="location">India</option>
+                <option value="location">China</option>
+                <option value="location">Qatar</option>
+                <option value="location">Nepal</option>
+                <option value="location">Cambodia</option>
+                <option value="location">Banladesh</option>
+                <option value="location">Dubai</option>
+                <option value="location">Begusarai</option>
+            </select>
+            <p><a href="">Internationals</a></p>
+        </section> 
+
+
+        <section class="f-s-s">
+            <article class="f-article">
+                <div class="f-head">Collection</div>
+                <nav class="f-nav">
+                    <ul>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Women</a></li>
+                        <li><a href="">Men</a></li>
+                        <li><a href="">Tommy Jeans</a></li>
+                        <li><a href="">Kids</a></li>
+                        <li><a href="">TH Mono</a></li>
+                        <li><a href="">Play to Progress</a></li>
+                    </ul>
+                </nav>
+            </article>
+            <article class="f-article">
+
+                <div class="f-head">About us</div>
+                <nav class="f-nav">
+                    <ul>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Biography</a></li>
+                        <li><a href="">Managment</a></li>
+                        <li><a href="">Sustainability</a></li>
+                        <li><a href="">Brands</a></li>
+                        <li><a href="">Retail Stores</a></li>
+                        <li><a href="">Brand protection</a></li>
+                    </ul>
+                </nav>
+            </article>
+            <article class="f-article">
+                <div class="f-head">Press Release</div>
+                <nav class="f-nav">
+                    <ul>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Press Contact</a></li>
+                        <li><a href=""> </a></li>
+                    </ul>
+                </nav>
+            </article>
+            <article class="f-article">
+                <div class="f-head">Follow Us</div>
+                <nav class="f-nav">
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">YouTube</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+    </footer>
+
+    
+
+        <section class="f-low">
+            <article class="red">
+                <div class="pt">  Tommy Hilfiger Licensing, LLC. All rights reserved 2023</div>  
+                <nav class="privacy">
+                    <ul>
+                        <li><a href=""> privacy policy</a> </li>
+                        <li><a href=""> cookies policy</a> </li>
+                        <li><a href=""> Term of use</a> </li>
+                        
+                    </ul>
+                </nav>
+                
+            </article>
+        </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
